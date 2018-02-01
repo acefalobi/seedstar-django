@@ -1,4 +1,4 @@
-# Jenkins Script
+# Profile Django App
 
 This simple Django application which stores names and email addresses in an SQLite database.
 
