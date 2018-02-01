@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Welcome to Seedstar Profiles
+{% endblock %}
+
+{% block content %}
+
+        <section id="cover-section" class="height-100 text-white" data-overlay="7">
+            <div class="container position-center-y">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <h2 class="text-white">Hi, welcome to the profile board</h2>
+                        <hr />
+                        <p>Meet all you need to add and view profiles</p>
+                        <a href="/add" class="btn btn-lg bg-primary">Add Profile</a>
+                        <a href="/list" class="btn btn-lg bg-secondary">List Profiles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

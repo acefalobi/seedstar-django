@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans|Montserrat" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- Interact CSS -->
+    <link href="{% static "css/interact.min.css" %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- Interact Color CSS -->
+    <link href="{% static "css/interact.colors.css" %}" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom CSS -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+
+    <header class="navbar navbar-fixed-top bg-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="#">
+                        <span class="text-white">Profile App</span>
+                    </a>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/add">Add Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-body">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

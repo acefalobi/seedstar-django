@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    Add a new Profile
+{% endblock %}
+
+{% block content %}
+
+    <section id="add-section" class="height-100 text-white" data-overlay="7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h3 class="bottom-hr-center text-white">Add Profile</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <label for="{{ form.name.name }}"
+                               class="text-white text-left width-full margin-left-20">{{ form.name.label }}</label>
+                        {{ form.name| add_class:"width-full" }}
+                        <div class="text-danger text-bold">{{ form.name.errors }}</div>
+                        <label for="{{ form.email.name }}"
+                               class="text-white text-left width-full margin-left-20">{{ form.email.label }}</label>
+                        {{ form.email | add_class:"width-full" }}
+                        <div class="text-danger text-bold">{{ form.email.errors }}</div>
+                        <button type="submit" class="btn bg-primary btn-block margin-top-40">Add Profile</button><br />
+                        <div class="text-danger text-bold">
+                            {{ form.non_field_errors }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{% block title %}
+    All Profiles
+{% endblock %}
+
+{% block content %}
+
+    <section id="list-section">
+        <div class="container">
+            <h3 class="bottom-hr-center text-primary text-center">Add Profile</h3>
+            <div class="row display-flex">
+                {% for profile in profiles %}
+                    <div class="col-md-4">
+                        <a href="mailto:{{ profile.email }}" class="text-dark">
+                            <div class="card">
+                                <div class="card-detail">
+                                    <h5 class="no-margin-bottom">{{ profile.name }}</h5>
+                                    <em class="h5 text-secondary">{{ profile.email }}</em>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
